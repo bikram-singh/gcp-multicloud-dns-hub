@@ -1,0 +1,32 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+# Keep the lock file committed
+!.terraform.lock.hcl
+
+# Backend config (use backend.tf.example as the template)
+backend.tf
+
+# Credentials: never commit these
+*.pem
+*.key
+*.json.key
+credentials*.json
+.aws/
+.azure/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,21 @@
+# Copy to terraform.tfvars (git-ignored) and edit.
+project_id = "your-gcp-project-id"
+
+# Keep false if a public zone for gcpcloudhub.in already exists in this project.
+create_public_zone = false
+
+# Added later, once the other environments exist (Phases 3 to 5):
+# forwarding_zones = {
+#   aws = {
+#     dns_name   = "aws.gcpcloudhub.in."
+#     target_ips = ["10.20.1.10"]
+#   }
+#   azure = {
+#     dns_name   = "azure.gcpcloudhub.in."
+#     target_ips = ["10.30.1.10"]
+#   }
+#   onprem = {
+#     dns_name   = "onprem.gcpcloudhub.in."
+#     target_ips = ["10.40.1.10"]
+#   }
+# }

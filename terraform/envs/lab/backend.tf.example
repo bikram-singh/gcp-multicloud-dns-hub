@@ -1,0 +1,9 @@
+# Copy to backend.tf after creating the state bucket:
+#   gcloud storage buckets create gs://<PROJECT_ID>-tfstate --location=asia-south1 --uniform-bucket-level-access
+#   gcloud storage buckets update gs://<PROJECT_ID>-tfstate --versioning
+terraform {
+  backend "gcs" {
+    bucket = "<PROJECT_ID>-tfstate"
+    prefix = "multicloud-dns-hub/lab"
+  }
+}
